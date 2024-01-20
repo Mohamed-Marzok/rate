@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.rate {
+  padding: 20px;
+  padding: 20px;
+  box-shadow: 2px 2px 20px 0px #ddd;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+}
+.rate input {
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  padding: 0 5px;
+  position: relative;
+}
+.rate input::after {
+  content: "\f005";
+  position: absolute;
+  font-family: fontawesome;
+  font-size: 30px;
+  color: #ddd;
+  transition: color 0.5s;
+}
+.rate input:hover ~ input::after,
+.rate input:hover::after,
+.rate input:checked ~ input::after,
+.rate input:checked::after {
+  color: var(--clr);
+}
